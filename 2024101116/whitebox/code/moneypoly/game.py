@@ -1,3 +1,5 @@
+"""Core game logic loop and state management for MoneyPoly."""
+
 from moneypoly.config import (
     GO_TO_JAIL_POSITION,
     JAIL_FINE,

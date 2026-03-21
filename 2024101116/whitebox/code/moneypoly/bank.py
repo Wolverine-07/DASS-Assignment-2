@@ -1,7 +1,9 @@
+"""Banking system handling funds, loans, and collections."""
 from moneypoly.config import BANK_STARTING_FUNDS
 
 
 class Bank:
+    """Represents the game bank managing total funds and payouts."""
     def __init__(self):
         self._funds = BANK_STARTING_FUNDS
         self._loans_issued = []

@@ -1,3 +1,4 @@
+"""Player entity and state handling."""
 from moneypoly.config import STARTING_BALANCE, BOARD_SIZE, GO_SALARY, JAIL_POSITION
 
 

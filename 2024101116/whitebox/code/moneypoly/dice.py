@@ -1,3 +1,4 @@
+"""Dice rolling simulation and statistics."""
 import random
 
 class Dice:
