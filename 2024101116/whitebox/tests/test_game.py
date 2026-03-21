@@ -21,3 +21,21 @@ def test_buy_property_exact_balance():
     assert player.balance == 0
     assert prop.owner == player
     assert prop in player.properties
+
+def test_pay_rent_transfers_money():
+    """Test that paying rent deducts from tenant and adds to owner."""
+    game = Game(["Alice", "Bob"])
+    tenant = game.players[0]
+    owner = game.players[1]
+    
+    tenant.balance = 1000
+    owner.balance = 1000
+    
+    prop = Property("Boardwalk", position=39, price=400, base_rent=50)
+    prop.owner = owner
+    owner.add_property(prop)
+    
+    game.pay_rent(tenant, prop)
+    
+    assert tenant.balance == 950
+    assert owner.balance == 1050
