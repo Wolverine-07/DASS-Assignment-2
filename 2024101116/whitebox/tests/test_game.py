@@ -39,3 +39,14 @@ def test_pay_rent_transfers_money():
     
     assert tenant.balance == 950
     assert owner.balance == 1050
+
+def test_find_winner_returns_richest():
+    """Test that find_winner returns the player with the highest net worth, not the lowest."""
+    game = Game(["Alice", "Bob", "Charlie"])
+    
+    game.players[0].balance = 500
+    game.players[1].balance = 2000
+    game.players[2].balance = 1500
+    
+    winner = game.find_winner()
+    assert winner.name == "Bob"
