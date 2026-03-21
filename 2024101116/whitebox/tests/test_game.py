@@ -50,3 +50,23 @@ def test_find_winner_returns_richest():
     
     winner = game.find_winner()
     assert winner.name == "Bob"
+
+def test_trade_credits_seller_cash():
+    """Test that a trade correctly deductions from buyer and adds to seller."""
+    game = Game(["Seller", "Buyer"])
+    seller = game.players[0]
+    buyer = game.players[1]
+    
+    seller.balance = 500
+    buyer.balance = 1000
+    
+    prop = Property("Park Place", position=37, price=350, base_rent=35)
+    prop.owner = seller
+    seller.add_property(prop)
+    
+    success = game.trade(seller, buyer, prop, 300)
+    
+    assert success is True
+    assert buyer.balance == 700
+    assert seller.balance == 800
+    assert prop.owner == buyer
