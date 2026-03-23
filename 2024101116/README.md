@@ -1,6 +1,7 @@
 # DASS Assignment 2
 **Author:** Prashant Vinod (Roll No: 2024101116)  
-**Git Repository:** [https://github.com/Wolverine-07/DASS-Assignment-2](https://github.com/Wolverine-07/DASS-Assignment-2)
+**Git Repository:** [https://github.com/Wolverine-07/DASS-Assignment-2](https://github.com/Wolverine-07/DASS-Assignment-2)  
+**OneDrive Link:** [INSERT YOUR ONEDRIVE LINK HERE]
 
 This repository contains the completion of Phase 1 (White Box Testing), Phase 2 (Integration Testing), and Phase 3 (Black Box API Testing) for DASS Assignment 2.
 
@@ -82,3 +83,22 @@ pytest blackbox/tests/ -v
 ```bash
 pytest -v
 ```
+
+---
+
+## Final Submission Instructions (Moodle > 20MB Limit)
+
+Because the complete assignment repository (including the required `.git` history and Docker image files) exceeds Moodle's 20MB upload limit, follow these steps to securely submit:
+
+1. **Zip the Entire Repository:** 
+   Navigate up one level to your `DASS-Assignment-2` project root and compress everything in it. **Crucially, ensure the hidden `.git` folder is included in the zip** so the TA can verify your commit history.
+   ```bash
+   cd ..
+   zip -r 2024101116_complete.zip . -x "venv/*" -x "__pycache__/*"
+   ```
+2. **Upload to OneDrive:** 
+   Upload the `2024101116_complete.zip` file to your institute OneDrive account. Generate a sharable link (ensure it has view access).
+3. **Update this README:** 
+   Paste your generated OneDrive link at the very top of this `README.md` file replacing `[INSERT YOUR ONEDRIVE LINK HERE]`.
+4. **Submit to Moodle:** 
+   Since you cannot upload the 280MB file to Moodle, simply create a lightweight zip containing **only this `README.md` file** (which now securely holds both your GitHub and OneDrive links). Name it `<RollNumber>.zip` (e.g., `2024101116.zip`) and upload that single lightweight file to Moodle.
